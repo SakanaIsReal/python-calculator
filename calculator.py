@@ -30,11 +30,17 @@ class Calculator:
             return result
     
     def modulo(self, a, b):
+        b_original = b
+        neg = a < 0 and b < 0
+        result = 0
         if b == 0:
             return "Cannot mod by Zero."
+        a, b = abs(a), abs(b)
         while a >= b:
-            a = a-b
-        return a
+            a = a - b
+        result = a 
+        return -result if neg or b_original < 0 else result
+
 
 # Example usage:
 if __name__ == "__main__":

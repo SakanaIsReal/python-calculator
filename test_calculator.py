@@ -45,10 +45,10 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(self.calc.divide(1, 0), "Cannot divide by Zero.")
 
     def test_modulo(self):
-        self.assertEqual(self.calc.modulo(3, 5), 3)
+        self.assertEqual(self.calc.modulo(15, 4), 3)
 
     def test_modulo_negative(self):
-        self.assertEqual(self.calc.modulo(-1, 5), -1)
+        self.assertEqual(self.calc.modulo(11, -2), -1)
 
     def test_modulo_zero(self):
         self.assertEqual(self.calc.modulo(1, 0), "Cannot mod by Zero.")
